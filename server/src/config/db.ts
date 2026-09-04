@@ -8,7 +8,7 @@ export const pool = new Pool({
     port: Number(process.env.DB_PORT) || 5432,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: process.env.cinema_db,
+    database: process.env.DB_NAME,
 });
 
 pool.on("connect", () => {
