@@ -15,7 +15,7 @@ const port = process.env.PORT || 5000;
 
 app.get("/api/test-db", async (req: Request, res: Response) => {
     try {
-      const result = await pool.query('SELECT NOW() as current_time, curren_database();')
+      const result = await pool.query('SELECT NOW() as current_time, current_database();')
       res.status(200).json({
             succes: true,
             data: result.rows[0],
